@@ -1,3 +1,3 @@
-# JQuery Dynamic Element Creation Guide
+# Tutoring - Basic Git Commands
 
 Working on
