@@ -1,3 +1,1 @@
-# Tutoring - Basic Git Commands
-
-Working on
+# Basic Git Commands
