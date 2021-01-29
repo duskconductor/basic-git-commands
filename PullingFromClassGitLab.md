@@ -47,6 +47,24 @@ That is why Richie had problems when he changed the README and tried to pull.
 
 We normally create a branch every time we want to add a new feature (function, file, etc) to code.
 
-<img src="./assets/img/gitLab/whatAreBranches.png">
+<img src="./assets/imgs/gitLab/whatAreBranches.png">
 
 When the feature is complete, we then merge our branch into the main branch by using a **pull request**.
+
+<img src="./assets/imgs/gitLab/creatingAPullRequest.png">
+
+### If that doesn't make sense, don't even worry about it.
+
+## Why are **WE** using two branches?
+
+Because we have two classes and one GitLab repo.
+
+**We're not using branches in the way they are normally used. (Since we're not planning on merging class1_revision branch into master branch)**
+
+Ultimately, each branch is used to hold the files for each class:
+
+**Class 1** uses the class1_revision branch
+
+**Class 2** uses the master branch
+
+###
