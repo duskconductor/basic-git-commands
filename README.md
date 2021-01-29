@@ -1,4 +1,4 @@
-# **Basics of Git**
+# **Git at Work**
 
 **Git at Work** | <a href="GitCommandList.md" target="_blank">Git Cheatsheet</a> | <a href="CreatingTeamRepo.md" target="_blank">Git Creating Team Repo</a> | <a href="GitHubAndRecruiters.md" target="_blank">GitHub and Recruiters</a> | <a href="GitTroubleShooting.md" target="_blank">Common Git Problems</a> | <a href="PullingFromClassGitLab.md" target="_blank">Pulling from Class GitLab</a>
 
@@ -84,13 +84,15 @@ ls -a
 
 ### GitHub and GitLab are basically Google Drive for Git Trees (repos).
 
-### GitHub and GitLab host your Git Tree, allowing others to access it.
+GitHub and GitLab host your Git Tree, allowing others to access it.
 
-### GitHub and GitLab are two different groups, however. So it might be easier to think of one as DropBox and the other as Google Drive.
+GitHub and GitLab are two different groups, however. So it might be easier to think of one as DropBox and the other as Google Drive.
 
 ---
 
 # Creating a Team Repo
+
+## Read a more depth explaination of this <a href="CreatingTeamRepo.md" target="_blank">here</a>
 
 ### Only one team member needs to create the Git Repo.
 
@@ -228,18 +230,46 @@ git remote show origin
 
 ### How Does Richie Get the Files from the Remote Repo on his Local Repo?
 
-Richie can use one of two commands: git pull OR git fetch
-
 <img src="assets/imgs/lifeCycle_remoteToLocal.png">
 
+Richie can use one of two commands: git pull OR git fetch
+
+<img src="assets/imgs/lifeCycle_pullVFetch.png">
+
+**GIT FETCH**
+
+```
+git fetch
+```
+
+This command will copy the changes made on the Remote Repo **but it will not add these changes to the local folder**. Instead, it stores them in a separate location.
+
+The reason for this is that some of the changes made on the Remote Repo might overwrite code that you have in your local folder.
+
+Git Fetch allows us to check if the remote repo code will rewrite our code.
+
+After we do git fetch, we can do the command:
+
+```
+git diff ...origin
+```
+
+This will compare the fetched repo and our current repo.
+
+If everything is okay, we can use git merge to change our local repo to the repo we fetched.
+
+```
+git merge
+```
+
+**GIT PULL**
+
+```
+git pull
+```
+
+Git pull basically runs both git fetch and git merge without checking to see if it is okay.
+
+This is very handy because it's quicker **but** it can also cause problems--especially when working as a team (or without branches).
+
 ---
-
-# Pulling From the Class GitLab
-
-Working on this part.
-
----
-
-# Common Git Problems
-
-Working on this part.
