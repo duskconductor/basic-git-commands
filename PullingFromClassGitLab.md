@@ -48,3 +48,5 @@ That is why Richie had problems when he changed the README and tried to pull.
 We normally create a branch every time we want to add a new feature (function, file, etc) to code.
 
 <img src="./assets/img/gitLab/whatAreBranches.png">
+
+When the feature is complete, we then merge our branch into the main branch by using a **pull request**.
