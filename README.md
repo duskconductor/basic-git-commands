@@ -120,6 +120,8 @@ git clone ???
 
 ### **Local Repo** The copy of the repo that each team member has their computer.
 
+**NOTE:** Normally we would use branches when working with teams. However, we are just two idiots with a coffee machine, so we are simplifying.
+
 ---
 
 # Adding Changes Made on Local Repo to the Remote Repo
@@ -188,25 +190,45 @@ If you run git status after commiting, you will see all the files have disappear
 
 You will also see:
 
+<img src="assets/imgs/lifeCycle_aheadByOneCommit.PNG">
+
+"Ahead by 1 commit." This is because our .Git file has changes that are not on the team GitHub.
+
+### GITHUB
+
+Now we just need to send the changes from our .Git file to the team GitHub.
+
+We can do that by using git push.
+
 ```
 git push origin main
 ```
 
-<img src="assets/imgs/lifeCycle_remoteToLocal.png">
+**NOTE:** "origin" is a variable that holds the URL of our remote repo. This was created for us when we did git clone. "Main" is the name of the branch we want to push to.
 
----
+# Getting Files from Remote Repo on Local Repo
 
-# Basic Git Commands
+## Mark uploaded the files onto GitHub, but Richie still needs them on HIS local Repo. How do we get the files there?
 
-# Checking to see if you need to git pull / git fetch
+### How does Richie know when Mark uploads files?
+
+If Richie does git status, it will tell him that his local repo is up to date.
+
+He will need to run this command instead:
 
 ```
 git remote show origin
 ```
 
-| **You do not need to pull ("Up to Date")**                      | **You need to pull ("Out of Date")**                              |
+| **Remote Repo has NOT been changed ("Up to Date")**             | **Changes have been made to Remote Repo ("Out of Date")**         |
 | --------------------------------------------------------------- | ----------------------------------------------------------------- |
 | <img src="./assets/imgs/command_remoteShowOrigin_upToDate.PNG"> | <img src="./assets/imgs/command_remoteShowOrigin_needToPull.PNG"> |
+
+### How Does Richie Get the Files from the Remote Repo on his Local Repo?
+
+Richie can use one of two commands: git pull OR git fetch
+
+<img src="assets/imgs/lifeCycle_remoteToLocal.png">
 
 ---
 
