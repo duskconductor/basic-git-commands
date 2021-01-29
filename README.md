@@ -54,6 +54,20 @@ Working on this part.
 
 ## <a id="basicCommands"></a> Basic Git Commands
 
+### Checking to see the current status of git
+
+```
+git status
+```
+
+<img src="./assets/imgs/command_gitStatus.PNG">
+
+Green: Files that have been added
+
+Red: Files that have not been added
+
+---
+
 ### Checking to see if you need to git pull / git fetch
 
 ```
