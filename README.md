@@ -54,7 +54,29 @@ Working on this part.
 
 ## <a id="basicCommands"></a> Basic Git Commands
 
-Working on this part.
+### Checking to see the current status of git
+
+```
+git status
+```
+
+<img src="./assets/imgs/command_gitStatus.PNG">
+
+Green: Files that have been added
+
+Red: Files that have not been added
+
+---
+
+### Checking to see if you need to git pull / git fetch
+
+```
+git remote show origin
+```
+
+| **You do not need to pull ("Up to Date")**                      | **You need to pull ("Out of Date")**                              |
+| --------------------------------------------------------------- | ----------------------------------------------------------------- |
+| <img src="./assets/imgs/command_remoteShowOrigin_upToDate.PNG"> | <img src="./assets/imgs/command_remoteShowOrigin_needToPull.PNG"> |
 
 ---
 
