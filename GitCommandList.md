@@ -46,9 +46,11 @@ git clone ????
 git status
 ```
 
-**Red** This was changed and needs to be added to staged
+<img src="./assets/imgs/command_gitStatus.PNG">
 
-**Green** This was changed and HAS BEEN added to staged
+> **Red** This was changed and needs to be added to staged
+>
+> **Green** This was changed and HAS BEEN added to staged
 
 ### File -> Staged
 
