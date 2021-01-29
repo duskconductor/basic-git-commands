@@ -26,7 +26,7 @@
 
 As the recruiter, you will actually look at these projects to judge the user's coding abilities. These projects should (1) work and (2) be final drafts.
 
-We can see that Mark has more projects, but several of their projects are **unfinished** and this does not look good for them.
+We can see that Mark has more projects, but several of his projects are **unfinished** and this does not look good for him.
 
 Richie only has two projects, but they are completed and well commented. This looks better for him.
 
@@ -48,7 +48,7 @@ Mark has been coding regularly, but Richie hasn't coded in a while. Mark would w
 
 You look in the Contribution Activity section to see whether Mark or Richie has experience coding with other people.
 
-In Mark's Contribution Activity, you can see _merges_ and _pull requests_, which indicate that they often codes with other people.
+In Mark's Contribution Activity, you can see _merges_ and _pull requests_, which indicate that he often codes with other people.
 
 In Richie's Contribution Activity, you don't see any merges and pull requests, which indicates he usually codes alone. This doesn't disqualify Richie, however.
 
@@ -62,7 +62,7 @@ You're going to look in both Mark and Richie's Pinned Projects to see a few more
 
 <img src="./assets/imgs/recruiter/projectCheck_Repo.PNG">
 
-**Number of Commits** A finished project typically has 20+ commits in a recruiter's mind.
+**Number of Commits** A finished project typically has 20+ commits (in a recruiter's mind).
 
 **Does the Code Have a README?** As the recruiter, you will use the readme to understand what the code was and what it's results were. If the code does not have a README, it looks unprofessional.
 
