@@ -70,7 +70,7 @@ ls -a
 
 \***\*Side Note:** This is why gitHub urls have the word "blob" in them.\*\*
 
-<img src="assets/imgs/whatIsGit_blob.png">
+<img src="assets/imgs/whatIsGit_blob.PNG">
 
 ## All of this, however, is currently just on your local computer.
 
@@ -92,13 +92,13 @@ ls -a
 
 ### Only one team member needs to create the Git Repo.
 
-<img src="assets/imgs/lifeCycle_create.PNG">
+<img src="assets/imgs/lifeCycle_createRepo.png">
 
 ### After the Repo has been created, it can be cloned by all team members.
 
 ### You'll need to get the url
 
-<img src="assets/imgs/lifeCycle_getURL.PNG">
+<img src="assets/imgs/lifeCycle_getURL.png">
 
 ### And use this command (replace ??? with the URL you got):
 
@@ -130,31 +130,19 @@ git clone ???
 
 <img src="assets/imgs/lifeCycle_localToRemote.png">
 
-```
-git add ???
-```
+### FILE
 
-```
-git commit -m "Add Message Here"
-```
+This is the actual code that Mark wrote.
 
-```
-git push origin main
-```
+The .Git file in the million-dollar-idea folder won't track Mark's code unless we tell it to--and this is a two step process.
 
-<img src="assets/imgs/lifeCycle_remoteToLocal.png">
+### STAGED
 
----
+It's best to think of STAGED as an empty box.
 
-# Creating GitHub Repos
+If we want our .Git file to track changes, we need to add it to this box.
 
-Working on this part.
-
----
-
-# Basic Git Commands
-
-### Checking to see the current status of git
+We can check which files / changes are in this box by using the git status command:
 
 ```
 git status
@@ -166,7 +154,49 @@ Green: Files that have been added
 
 Red: Files that have not been added
 
+To add files to our box (to stage files) we need to use the git add command:
+
+```
+git add ???
+```
+
+If we want to add all the red files to our box, we can use the git add command with a '.' instead of a file name:
+
+```
+git add .
+```
+
+### .GIT
+
+Now that all the files are in our box, we just have to slap some tape on and deliver it to the .git file.
+
+We can do that with the commit -m command.
+
+**NOTE:** If you forget to add -m, git will try to get you to add a message using a code editor.
+
+```
+git commit -m "Add Message Here"
+```
+
+We add these messages for two reasons:
+
+- So our team can easily see what we added to the code
+
+- So it is easier to remember what version of the code we are on in case we need to revert back to it later.
+
+If you run git status after commiting, you will see all the files have disappeared. This is because you have delivered them to the .git file.
+
+You will also see:
+
+```
+git push origin main
+```
+
+<img src="assets/imgs/lifeCycle_remoteToLocal.png">
+
 ---
+
+# Basic Git Commands
 
 # Checking to see if you need to git pull / git fetch
 
