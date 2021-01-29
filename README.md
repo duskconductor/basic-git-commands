@@ -30,7 +30,7 @@
 
 ---
 
-## <a id="differenceBetween"></a> What is Git?
+# What is Git?
 
 ### Git is a **version control program**. This is what you have on your computer.
 
@@ -68,13 +68,17 @@ ls -a
 
 ### Git saves all versions of a file together as a **Binary Large OBject (BLOB)**.
 
+\***\*Side Note:** This is why gitHub urls have the word "blob" in them.\*\*
+
+<img src="assets/imgs/whatIsGit_blob.png">
+
 ## All of this, however, is currently just on your local computer.
 
 ### We need to share our versions with others--that's where GitHub and GitLab come in.
 
 ---
 
-## <a id="differenceBetween"></a> What is the difference between Git / GitHub / GitLab?
+# What is the difference between Git / GitHub / GitLab?
 
 ### GitHub and GitLab are basically Google Drive for Git Trees (repos).
 
@@ -84,19 +88,71 @@ ls -a
 
 ---
 
-## <a id="lifeCycle"></a> What is the Git Life Cycle?
+# Creating a Team Repo
+
+### Only one team member needs to create the Git Repo.
+
+<img src="assets/imgs/lifeCycle_create.PNG">
+
+### After the Repo has been created, it can be cloned by all team members.
+
+### You'll need to get the url
+
+<img src="assets/imgs/lifeCycle_getURL.PNG">
+
+### And use this command (replace ??? with the URL you got):
+
+```
+git clone ???
+```
+
+<img src="assets/imgs/lifeCycle_clone.png">
+
+## _IMPORTANT_ Cloning a repo automatically does git init for you
+
+### You will find the .git file with the folder created by git clone
+
+## Any files you add outside of the folder created by git clone will not be tracked by the .git file
+
+### **Remote Repo** The repo on GitHub. This is where the whole team takes their code from.
+
+**NOTE:** Ideally the code on the GitHub repo should always be working. Team members should not add their code to the Remote Repo until the code works on their computer
+
+### **Local Repo** The copy of the repo that each team member has their computer.
+
+---
+
+# Adding Changes Made on Local Repo to the Remote Repo
+
+## Richie is waiting on Mark's code to start coding! How do we move the files from Mark's **local repo** to the **remote repo**?
+
+### This requires three steps:
+
+<img src="assets/imgs/lifeCycle_localToRemote.png">
+
+```
+git add ???
+```
+
+```
+git commit -m "Add Message Here"
+```
+
+```
+git push origin main
+```
+
+<img src="assets/imgs/lifeCycle_remoteToLocal.png">
+
+---
+
+# Creating GitHub Repos
 
 Working on this part.
 
 ---
 
-## <a id="createRepo"></a> Creating GitHub Repos
-
-Working on this part.
-
----
-
-## <a id="basicCommands"></a> Basic Git Commands
+# Basic Git Commands
 
 ### Checking to see the current status of git
 
@@ -112,7 +168,7 @@ Red: Files that have not been added
 
 ---
 
-### Checking to see if you need to git pull / git fetch
+# Checking to see if you need to git pull / git fetch
 
 ```
 git remote show origin
@@ -124,12 +180,12 @@ git remote show origin
 
 ---
 
-## <a id="classGitLab"></a> Pulling From the Class GitLab
+# Pulling From the Class GitLab
 
 Working on this part.
 
 ---
 
-## <a id="troubleshooting"></a> Common Git Problems
+# Common Git Problems
 
 Working on this part.
