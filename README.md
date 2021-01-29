@@ -304,7 +304,7 @@ So now when Richie tries to git pull, he gets this error message:
 
 Git is telling Richie that he will lose the changes he made to the README if he tries to pull the file. Because of this, it refuses to pull.
 
-> > **NOTE:** If you are pulling from the class GitLab and then writing code directly inside the files, you will get this error next time you try to pull. (Because pulling will make you lose all the code you added (the original files are empty and you are trying to pull them again).)
+> **NOTE:** If you are pulling from the class GitLab and then writing code directly inside the files, you will get this error next time you try to pull. (Because pulling will make you lose all the code you added (the original files are empty and you are trying to pull them again).)
 
 ### What Should Richie Do?
 
@@ -328,7 +328,7 @@ Richie can see his changes by using the command git stash list:
 git stash list
 ```
 
-<img src="./assets/imgs/gitStashList.PNG">
+<img src="./assets/imgs/gitStashList.png">
 
 This is why it is important to add the optional message--it makes finding the stashed changes easier.
 
