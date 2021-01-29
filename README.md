@@ -160,7 +160,7 @@ Green: Files that have been added
 
 Red: Files that have not been added
 
-To add files to our box (to stage files) we need to use the git add command:
+To add files to our box (to stage files) we need to use the git add command (replace ??? with the name of the file you want to add):
 
 ```
 git add ???
@@ -256,7 +256,23 @@ git diff ...origin
 
 This will compare the fetched repo and our current repo.
 
-If everything is okay, we can use git merge to change our local repo to the repo we fetched.
+For an example, I'm going to add some text "Making a change to the README so that I can get a pull error for a tutorial." to a README file. Then I'll run git fetch and git diff ...origin
+
+<img src="./assets/imgs/lifeCycle_showDiffCommand.PNG">
+
+You can see that git diff is giving me two blocks that begin with **diff --git a/README.md b/README.md**. These are the two repos being compared.
+
+You can also see the text I added showing up in green on the bottom one. This means that I added the text into the README on the GitHub, but I didn't add it on my local computer.
+
+**Green Text** Something was added and it will not overwrite any of your code.
+
+**Red Text** Something was deleted
+
+**Yellow Text** The code is different than your code.
+
+If everything is okay (Green or red), we can use git merge to change our local repo to the repo we fetched.
+
+> If it is Yellow, we will need to resolve Merge Conflicts--which we'll talk about at a later time.
 
 ```
 git merge
@@ -273,3 +289,73 @@ Git pull basically runs both git fetch and git merge without checking to see if 
 This is very handy because it's quicker **but** it can also cause problems--especially when working as a team (or without branches).
 
 ---
+
+## Pull Error
+
+Richie is having a problem.
+
+While waiting for Mark to finish cleaning the data, Richie wrote quite a bit on the README.
+
+It turns out that Mark added some things to the README, too.
+
+So now when Richie tries to git pull, he gets this error message:
+
+<img src="./assets/imgs/pullError.PNG">
+
+Git is telling Richie that he will lose the changes he made to the README if he tries to pull the file. Because of this, it refuses to pull.
+
+> > **NOTE:** If you are pulling from the class GitLab and then writing code directly inside the files, you will get this error next time you try to pull. (Because pulling will make you lose all the code you added (the original files are empty and you are trying to pull them again).)
+
+### What Should Richie Do?
+
+## Git Stash
+
+```
+git stash save "optional message"
+```
+
+<img src="./assets/imgs/gitStash.png">
+
+The git stash command will store all of Richie's changes in another location.
+
+This will change Richie's local repo back to a version where it is okay to pull the changes on the remote repo.
+
+It will also let Richie keep all the changes he made.
+
+Richie can see his changes by using the command git stash list:
+
+```
+git stash list
+```
+
+<img src="./assets/imgs/gitStashList.PNG">
+
+This is why it is important to add the optional message--it makes finding the stashed changes easier.
+
+**Because Richie stashed his changes, git will now allow him to git pull from the remote repo**
+
+## Adding Richie's Stashed Content
+
+That's a bit beyond the scope of today's class (we've only got an hour to go over everything) but it can be done with either command:
+
+```
+git stash apply STASH-NAME
+```
+
+or
+
+```
+git stash pop
+```
+
+Pop will automatically grab the last stashed content (you do not need the name).
+
+**However, you will have to deal with a merge conflict--which we'll go over at a later time (since, no time)**
+
+Typically merge conflicts will look like this on VS Code:
+
+<img src="./assets/imgs/merge_conflict.PNG">
+
+Basically, you need to select which version of the code you want to keep in the main code, delete the version of the code you wish to discard, and save the file.
+
+**BUT, ONCE AGAIN, WE'LL GO OVER IT AT A LATER DATE.**
