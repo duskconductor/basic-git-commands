@@ -2,7 +2,7 @@
 
 # GitHub and Recruiters
 
-<a href="README.md" target="_blank">Git at Work</a> | <a href="GitCommandList.md" target="_blank">Git Cheatsheet</a> | <a href="CreatingTeamRepo.md" target="_blank">Git Creating Team Repo</a> | **GitHub and Recruiters** | <a href="GitTroubleShooting.md" target="_blank">Common Git Problems</a> | <a href="PullingFromClassGitLab.md" target="_blank">Pulling from Class GitLab</a>
+<a href="README.md" target="_blank">Git at Work</a> | <a href="GitCommandList.md" target="_blank">Git Cheatsheet</a> | <a href="CreatingTeamRepo.md" target="_blank">Git Creating Team Repo</a> | **GitHub and Recruiters** | <a href="PullingFromClassGitLab.md" target="_blank">Pulling from Class GitLab</a>
 
 ## You're a recruiter for Stark Industries.
 
