@@ -4,15 +4,13 @@
 
 <a href="README.md" target="_blank">Git at Work</a> | **Git Cheatsheet** | <a href="CreatingTeamRepo.md" target="_blank">Git Creating Team Repo</a> | <a href="GitHubAndRecruiters.md" target="_blank">GitHub and Recruiters</a> | <a href="PullingFromClassGitLab.md" target="_blank">Pulling from Class GitLab</a>
 
-## Adding a .Git file to a folder (Not needed when clone used)
+## If you have a folder with files that you want to add to an empty GitHub repo:
 
 ```
 git init
 ```
 
-## Adding a remote (Remote Repo URL / GitHub Repo URL) to a .Git file (Not needed when clone used)
-
-Replace ??? with the Remote Repo URL / GitHub Repo URL
+Replace ??? with the Empty GitHub Repo URL / GitHub Repo URL
 
 ```
 git remote add origin ???
@@ -20,7 +18,7 @@ git remote add origin ???
 
 ---
 
-## Cloning a Repo
+## If you want to copy an existing GitHub repo onto your computer
 
 Replace ??? with the Remote Repo URL / GitHub Repo URL
 
@@ -28,9 +26,7 @@ Replace ??? with the Remote Repo URL / GitHub Repo URL
 git clone ????
 ```
 
-> ## DO NOT DO BOTH GIT INIT AND GIT CLONE
->
-> If you have a .Git file inside one folder and another .Git file inside of a folder inside that folder, it will cause problems.
+(This will do `git init` and `git remote add orgin` for you, so you do not have to)
 
 ---
 
