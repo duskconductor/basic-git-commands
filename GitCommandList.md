@@ -4,6 +4,32 @@
 
 <a href="README.md" target="_blank">Git at Work</a> | **Git Cheatsheet** | <a href="CreatingTeamRepo.md" target="_blank">Git Creating Team Repo</a> | <a href="GitHubAndRecruiters.md" target="_blank">GitHub and Recruiters</a> | <a href="PullingFromClassGitLab.md" target="_blank">Pulling from Class GitLab</a>
 
+## Useful commands for terminal / gitBash:
+
+See all files in current folder:
+
+```
+ls
+```
+
+See all files--including hidden files like .git--in the current folder:
+
+```
+ls -a
+```
+
+Change directories/folders (replace ??? with the name of the folder)
+
+```
+cd ???
+```
+
+Go back into previous directory/folder:
+
+```
+cd ..
+```
+
 ## If you have a folder with files that you want to add to an empty GitHub repo:
 
 ```
@@ -144,4 +170,16 @@ Then we will need to pull.
 
 ```
 git pull
+```
+
+---
+
+---
+
+### Un-Committing staged (Removing something after `git add`-ing it)
+
+Replace ??? with the file
+
+```
+git restore --staged ???
 ```
