@@ -12,17 +12,7 @@ Your SSH-Keys and passwords on **GitHub** will be different from your SSH-Keys a
 
 You will have to set those up separately.
 
-### GitHub vs. GitLab
-
-I think of GitLab as GitHub for rich people.
-
-GitLab lets you have a private Git Repo that you invite people to. It's better for private projects but you have to pay for it.
-
-GitHub is better for open source projects--projects that are open to everyone to see and add to. You can use it for private projects as well, but you have to pay for it.
-
-**We're using GitLab because we only want our class to access the files in our class repository.**
-
-## Branches
+## Super Quick Explanation of Branches
 
 The first thing you'll notice when looking at our Class Repository is that we're using branches.
 
@@ -67,4 +57,78 @@ Ultimately, each branch is used to hold the files for each class:
 
 **Class 2** uses the master branch
 
-###
+## NOW -- LET'S GET THE FILES ONTO OUR COMPUTER
+
+### Cloning the Repo
+
+GitLab and GitHub are different **but** they're both based around git, so cloning the repo onto your computer is similar:
+
+<img src="./assets/imgs/gitLab/cloning.PNG">
+
+This time, we will want to copy our HTTPS link.
+
+Then we will do the usual (replace ??? with the HTTPS link):
+
+```
+git clone ???
+```
+
+(This might take a while since there are a lot of files--don't worry!)
+
+As usual, it creates a folder that we'll need to `cd` into.
+
+If you do `ls -a`, you will see the .git file.
+
+If you do `git remote -v`, you will see that remote origin has been set up.
+
+### If you are in class 2, you are finished -- this is master branch and is therefore all of your files: enjoy
+
+### If you are in class 1, there is one more step: We have to change our current branch.
+
+We can do that by using the `git checkout` command:
+
+```
+git checkout class1_revision
+```
+
+Checkout changes the branch you are currently using. We want to use class1_revision branch.
+
+It might take some time, but your files should change.
+
+### How do I know which branch I am using?
+
+The branch shows up in your terminal!
+
+Using master branch:
+
+<img src="./assets/imgs/gitLab/masterBranch.PNG">
+
+Using class1_revision
+
+<img src="./assets/imgs/gitLab/class1_revisionBranch.PNG">
+
+**IMPORTANT** It is best not to work on the files in the cloned repo. You should copy the files you need from the cloned repo.
+
+If you make changes to a file in the cloned repo and then try to pull changes, Git will not let you pull until you `git stash` your changes... Which means you'll lose all your work until you work through adding the stashed changes back.
+
+And that's a bother.
+
+So it's easiest to have two folders: The one you pull changes from and a copy of this that you add your own code to.
+
+## How to get new files from the GitLab
+
+### Class 1:
+
+```
+git pull origin class1_revision
+```
+
+### Class 2:
+
+```
+git pull origin master
+```
+
+## If you have an error, you will probably need to `git stash` before it will let you pull.
+
+### This will remove all the changes you have made to the code (which is why we're recommending to copy the files from the cloned repo into a non-git folder and working on the assignments there)

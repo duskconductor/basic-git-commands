@@ -42,6 +42,14 @@ Replace ??? with the Empty GitHub Repo URL / GitHub Repo URL
 git remote add origin ???
 ```
 
+To see if the remote was set up properly you can do:
+
+```
+git remote -v
+```
+
+You should see origin for both fetch and push.
+
 ---
 
 ## If you want to copy an existing GitHub repo onto your computer
