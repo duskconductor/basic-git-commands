@@ -28,8 +28,6 @@
 
 ### **NOTE:** Normally the solution involves a data pipeline, a data warehouse / lake, and multiple analysts. However, our team is two idiots and their coffee machine so we're simplifying the solution quite a bit.
 
-<img src="assets/imgs/whyGit_normally.png">
-
 ---
 
 # What is Git?
