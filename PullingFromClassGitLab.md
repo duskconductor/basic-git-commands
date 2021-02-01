@@ -41,7 +41,7 @@ We normally create a branch every time we want to add a new feature (function, f
 
 When the feature is complete, we then merge our branch into the main branch by using a **pull request**.
 
-<img src="./assets/imgs/gitLab/creatingAPullRequest.png">
+<img src="./assets/imgs/gitLab/creatingAPullRequest.PNG">
 
 ### If that doesn't make sense, don't even worry about it.
 
