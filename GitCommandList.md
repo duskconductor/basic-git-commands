@@ -4,9 +4,13 @@
 
 <a href="README.md" target="_blank">Git at Work</a> | **Git Cheatsheet** | <a href="CreatingTeamRepo.md" target="_blank">Git Creating Team Repo</a> | <a href="GitHubAndRecruiters.md" target="_blank">GitHub and Recruiters</a> | <a href="PullingFromClassGitLab.md" target="_blank">Pulling from Class GitLab</a>
 
-## Useful commands for terminal / gitBash:
+---
 
-See all files in current folder:
+# General Terminal GitBash Commands
+
+## Useful commands for terminal / gitBash: 
+
+See all files in current folder (ls stands for list):
 
 ```
 ls
@@ -18,7 +22,7 @@ See all files--including hidden files like .git--in the current folder:
 ls -a
 ```
 
-Change directories/folders (replace ??? with the name of the folder)
+Change directories/folders (replace ??? with the name of the folder) (cd stands for change directory):
 
 ```
 cd ???
@@ -29,6 +33,33 @@ Go back into previous directory/folder:
 ```
 cd ..
 ```
+
+Open current folder in VSCode (if this doesn't work for you, you'll need to <a href="https://stackoverflow.com/questions/29971053/how-to-open-visual-studio-code-from-the-command-line-on-osx" target="_blank">add the shell command</a>):
+```
+code .
+```
+
+Get the current path (pwd stands for print working directory):
+
+```
+pwd
+```
+
+Get all previously used commands:
+```
+history
+```
+
+Clear terminal screen:
+```
+clear
+```
+
+**You can always press up arrow on the terminal to retrieve your last command and edit it**
+
+---
+
+# Creating Repo
 
 ## If you have a folder with files that you want to add to an empty GitHub repo:
 
@@ -50,6 +81,8 @@ git remote -v
 
 You should see origin for both fetch and push.
 
+**Remote is basically just the link to your remote repository (your GitHub repo) and is used when pushing / pulling from your local repository (your computer). You can name it anything but the default / standard is usually 'origin'**
+
 ---
 
 ## If you want to copy an existing GitHub repo onto your computer
@@ -65,6 +98,11 @@ git clone ????
 ---
 
 ---
+
+# Adding Changes from your computer (Local) to GitHub (Remote)
+
+<a name="localToRemote"></a>
+
 
 ## Adding Changes From Local Repo (Our Computer) to Remote Repo (GitHub)
 
