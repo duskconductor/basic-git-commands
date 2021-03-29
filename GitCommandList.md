@@ -270,7 +270,47 @@ But this particular command can often be wonky and takes longer to type
 
 <img src="./assets/imgs/gitStash.png">
 
-### Git Stash
+### Option 1 - Soft Reset
+
+Soft reset will remove your local files from the commit--BUT NOT FROM YOUR COMPUTER. You'll then be able to pull from your remote.
+
+**Note: ```git reset --hard HEAD~1``` will remove the files from your computer**
+
+```
+git reset --soft HEAD~1
+```
+
+(HEAD~1 is basically telling git to go back a commit and --soft is telling it "BUT DON'T DELETE THE FILES FROM MY LOCAL")
+
+You'll then be able to ```git pull```.
+
+(If not, try removing the files from staged:
+
+```
+git restore --staged ???
+```
+
+)
+
+### Option 2 - FORCE PUSH
+
+If there's nothing important on the remote (or if you've copied all the changes from the remote (GitHub) and added them to your local ) **and you're the only person working on this repo** you can go ahead and do a force push.
+
+Force push basically tells git "I DON'T CARE WHAT'S ON THAT REPO, SLAP EVERYTHING FROM MY LOCAL ON THE REMOTE."
+
+```
+git push origin ??? --force
+```
+
+**Don't be that person who uses ```git push --force``` on a collab project, though. It'll make things harder for the people you're working with and therefore make things harder for you** 
+
+(The reason for this being that the .git file keeps track of change history and you're basically overwriting the change history on the shared main repo. Meaning there will be problems for everyone elses' local git files since they don't have the history you've forced onto the main. Sometimes it's fine; other times it's the git-pocalypse. There's memes-a-plenty about this one.)
+
+<img src="assets/imgs/gitPushForce.png">
+
+### Option 3 - Git Stash
+
+**IMPORTANT - This command will "delete" the files you've stashed until you pull the stash out again**
 
 Saves our changes in a temporary storage outside of our local repo. Allows us to pull.
 
