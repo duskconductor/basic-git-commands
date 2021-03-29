@@ -101,8 +101,6 @@ git clone ????
 
 # Adding Changes from your computer (Local) to GitHub (Remote)
 
-<a name="localToRemote"></a>
-
 
 ## Adding Changes From Local Repo (Our Computer) to Remote Repo (GitHub)
 
@@ -154,6 +152,8 @@ git push origin main
 
 ---
 
+# Pulling Changes from Remote Repo (GitHub) to our Local Repo (Computer)
+
 ## Remote Repo (GitHub) to Local Repo (Our Computer)
 
 <img src="assets/imgs/lifeCycle_remoteToLocal.png">
@@ -193,8 +193,76 @@ git pull
 ```
 
 ---
+---
+
+# Branches
+
+### Seeing which branch I'm on / Seeing all branches on my local repo
+
+The one I'm on will be indicated with a star.
+
+```
+git branch
+```
+
+### Seeing all the branches on my remote repo (GitHub)
+
+```
+git branch -r 
+```
+
+
+### Creating a new branch and switching to it
+
+Replace ??? with the name of the new branch
+
+```
+git checkout -b ???
+```
+
+### Switching to an existing branch (Works with remote branches)
+
+Replace ??? with the name of the existing branch (**NOTE** This command does not have ```-b```)
+
+```
+git checkout ???
+```
+
+### Pushing to a branch
+
+Depends on your global git settings. Typically, the first time you push to a branch, you'll need to do (replace ??? with branch name)
+
+```
+git push -u origin ???
+```
+
+After you've done this command once, however, you can simply do
+
+```
+git push origin ???
+```
+
+It's also possible to use
+
+```
+git push --set-upstream origin ???
+```
+
+But this particular command can often be wonky and takes longer to type
+
+**Remember, after you push to a branch, you will need to do the following to add the code to main:**
+> - [ ] Make a pull request from your branch to the main branch
+> - [ ] Approve the pull request (either you or the person maintaining the main branch (maintainer))
+> - [ ] Switch to the main branch on your local
+> - [ ] ```git pull origin main``` on your main branch
+
+**Also remember, branches are made to be deleted after merging (They're used to add small features to the main branch)**
 
 ---
+
+---
+
+# Possible Error
 
 ## Git will not let us pull because we made changes to files
 
