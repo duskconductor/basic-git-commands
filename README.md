@@ -86,11 +86,13 @@ GitHub and GitLab host your Git Tree, allowing others to access it.
 
 GitHub and GitLab are two different groups, however. So it might be easier to think of one as DropBox and the other as Google Drive.
 
+Both are close competitors when it comes to hosting repositories and offer similar functionality.
+
 ---
 
 # Creating a Team Repo
 
-## Read a more depth explaination of this <a href="CreatingTeamRepo.md" target="_blank">here</a>
+## Read a more depth explanation of this <a href="CreatingTeamRepo.md" target="_blank">here</a>
 
 ### Only one team member needs to create the Git Repo.
 
@@ -98,7 +100,7 @@ GitHub and GitLab are two different groups, however. So it might be easier to th
 
 ### After the Repo has been created, it can be cloned by all team members.
 
-### You'll need to get the url
+### You'll need to get the URL
 
 <img src="assets/imgs/lifeCycle_getURL.png">
 
@@ -188,7 +190,7 @@ We add these messages for two reasons:
 
 - So it is easier to remember what version of the code we are on in case we need to revert back to it later.
 
-If you run git status after commiting, you will see all the files have disappeared. This is because you have delivered them to the .git file.
+If you run git status after committing, you will see all the files have disappeared. This is because you have delivered them to the .git file.
 
 You will also see:
 
@@ -207,6 +209,7 @@ git push origin main
 ```
 
 **NOTE:** "origin" is a variable that holds the URL of our remote repo. This was created for us when we did git clone. "Main" is the name of the branch we want to push to.
+
 
 # Getting Files from Remote Repo on Local Repo
 
